@@ -1,3 +1,32 @@
 tr
 	td.preheader(style=`padding: 0; padding-top: 32px; padding-bottom: 16px;`)
 		table
+			tr.row
+				- for(let x = 0; x < 1; x++)
+					td(class = `col-6 order-${x + 1}`)
+						span.text
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo sit facilis quae amet earum ullam dolores quis magnam libero, nemo!
+		table
+			tr.row
+				- for(let x = 0; x < 2; x++)
+					td(class = `col-3 order-${x + 1}`)
+						span.text
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo sit facilis quae amet earum ullam dolores quis magnam libero, nemo!
+		table
+			tr.row
+				- for(let x = 0; x < 3; x++)
+					td(class = `col-2 order-${x + 1}`)
+						span.text
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo sit facilis quae amet earum ullam dolores quis magnam libero, nemo!
+		table
+			tr.row
+				- for(let x = 0; x < 6; x++)
+					td(class = `col-1 order-${x + 1}`)
+						span.text
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo sit facilis quae amet earum ullam dolores quis magnam libero, nemo!
+		table
+			tr.row
+				- for(let x = 0; x < 2; x++)
+					td(class = `col-${(x == 1) ? '2' : '4'} order-${x + 1}`)
+						span.text
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo sit facilis quae amet earum ullam dolores quis magnam libero, nemo!

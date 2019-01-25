@@ -1,7 +1,7 @@
 import gulp from 'gulp';
 import browserSync from 'browser-sync';
 import pug from 'gulp-pug';
-// import inlineCss from 'gulp-inline-css';
+import inlineCss from 'gulp-inline-css';
 import htmlbeautify from 'gulp-html-beautify';
 
 const server = browserSync.create();
@@ -28,6 +28,14 @@ const watch = () => {
 export const html = () => {
 	return gulp.src(`src/pug/index.pug`)
 		.pipe(pug())
+		.pipe(inlineCss({
+      applyStyleTags: true,
+      applyLinkTags: true,
+      removeStyleTags: true,
+      removeLinkTags: true,
+      preserveMediaQueries: true,
+      applyTableAttributes: true
+    }))
 		.pipe(htmlbeautify({
 			"indent_size": 4,
 			"indent_char": ` `,
