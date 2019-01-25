@@ -1,0 +1,35 @@
+- var itemLink = [``, `1`, `2`, `3`, `4`]
+
+- var itemImg = [``, `https://via.placeholder.com/140x210`, `https://via.placeholder.com/140x210`, `https://via.placeholder.com/140x210`, `https://via.placeholder.com/140x210`]
+- var ff = `font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;`
+
+mixin item(link, img, name, price)
+  td.item(style=`display: inline-block; width: 160px; padding: 0; padding-bottom: 32px;`)
+    table(
+      cellpadding=`0`
+      cellspacing=`0`
+      width=`100%`
+    )
+      tr
+        td.item__img(style=`padding: 0; padding-bottom: 10px; font-size: 0; text-align: center;`)
+          a(href=link target=`_blank`)
+            img(src=img alt=`` width=`140` style=`width: 100%; max-width: 140px; height: auto;`)
+      tr
+        td.item__name(style=`padding: 0; padding-bottom: 10px; text-align: center;`)
+          span(style=`${ff} font-size: 16px; line-height: 20px; color: #333333;`)= name
+      tr
+        td.item__price(style=`padding: 0; text-align: center;`)
+          span(style=`${ff} font-size: 16px; line-height: 20px; color: #333333; font-weight: 500;`)= price
+
+tr
+  td.goods(style=`padding: 0;`)
+    table(
+      cellpadding=`0`
+      cellspacing=`0`
+      width=`100%`
+    )
+      tr(style=`font-size: 0; text-align: center`)
+        +item(itemLink[1], itemImg[1], `Товар №1`, `100 р`)
+        +item(itemLink[2], itemImg[2], `Товар №2`, `100 р`)
+        +item(itemLink[3], itemImg[3], `Товар №3`, `100 р`)
+        +item(itemLink[4], itemImg[4], `Товар №4`, `100 р`)
