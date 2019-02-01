@@ -4,13 +4,78 @@ style.
 		padding: 0;
 		background-color: green;
 	}
+	.text {
+		font-size: 16px;
+		line-height: 20px;
+		color: #333333;
+		font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+	}
+	.row {
+		font-size: 0;
+		text-align: center;
+	}
+	.table {
+		width: 100%;
+	}
+
+	td[class^="col"] {
+		display: inline-block;
+		padding: 0;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-bottom: 20px;
+		vertical-align: top;
+		text-align: left;
+	}
+	.col-2 {
+		width: 90px;
+	}
+	.col-3 {
+		width: 140px;
+	}
+	.col-4 {
+		width: 200px;
+	}
+	.col-6 {
+		width: 300px;
+	}
+	.col-8 {
+		width: 400px;
+	}
+	.col-9 {
+		width: 460px;
+	}
+	.col-12 {
+		width: 100%;
+	}
 	@media only screen and (min-width: 660px) {
 		body {
 			background-color: red !important;
+		}
+		.col-6 {
+			width: 310px !important;
+		}
+		.col-8 {
+			width: 420px !important;
+		}
+		.col-12 {
+			width: 640px !important;
 		}
 	}
 	@media only screen and (max-width: 660px) {
 		body {
 			background-color: blue !important;
+		}
+		.row {
+			display: block !important;
+			max-width: 300px !important;
+			margin: 0 auto !important;
+			padding-left: 20px !important;
+			padding-right: 20px !important;
+		}
+		td[class^="col"] {
+			width: 100% !important;
+			padding-left: 0 !important;
+			padding-right: 0 !important;
 		}
 	}
